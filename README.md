@@ -1,5 +1,7 @@
 # zy-player-web2
 
+目的是把zy player移植到web上去，方便使用
+
 ## Project setup
 ```
 npm install

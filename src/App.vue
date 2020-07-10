@@ -1,32 +1,81 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div id="app" :class="appTheme">
+    <Aside />
+    <div class="zy-body">
+      <Frame />
+      <Film v-show="view === 'Film'" />
+      <Play v-show="view === 'Play'" />
+      <Star v-show="view === 'Star'" />
+      <Setting v-show="view === 'Setting'" />
     </div>
-    <router-view/>
+    <transition name="slide">
+      <Detail v-if="detail.show"/>
+    </transition>
+    <transition name="slide">
+      <Share v-if="share.show"/>
+    </transition>
   </div>
 </template>
 
-<style>
+<script>
+
+export default {
+  name: 'App',
+  data () {
+    return {
+      appTheme: 'theme-light'
+    }
+  },
+  computed: {
+    view () {
+      return this.$store.getters.getView
+    },
+    detail () {
+      return this.$store.getters.getDetail
+    },
+    share () {
+      return this.$store.getters.getShare
+    },
+    theme () {
+      return this.$store.getters.getTheme
+    }
+  },
+  watch: {
+    theme () {
+      this.changeTheme()
+    }
+  },
+  methods: {
+    changeTheme () {
+      this.appTheme = `theme-${this.theme}`
+    }
+  }
+}
+</script>
+
+<style lang="scss">
+@import './assets/scss/theme.scss';
+html, body, #app{
+  border-radius: 6px;
+}
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+  -webkit-tap-highlight-color: transparent;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  .zy-body{
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 20px 20px;
+  }
 }
 </style>
