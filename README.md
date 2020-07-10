@@ -1,4 +1,4 @@
-# zy-player-web2
+# zy-player-web
 
 目的是把zy player移植到web上去，方便使用
 
