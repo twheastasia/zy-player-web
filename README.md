@@ -1,6 +1,6 @@
 # zy-player-web
 
-目的是把zy player移植到web上去，方便使用
+目的是把[zy player](https://github.com/Hunlongyu/ZY-Player)移植到web上去，方便使用
 
 ## Project setup
 ```
