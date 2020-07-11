@@ -141,7 +141,7 @@ export default {
   left: 0;
   bottom: 0;
   width: 100%;
-  height: calc(100% - 40px);
+  height: 100%;
   z-index: 999;
   .detail-content{
     height: calc(100% - 10px);

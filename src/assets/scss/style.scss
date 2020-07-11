@@ -47,6 +47,8 @@
     width: 100%;
     overflow-y: auto;
     min-height: 0;
+    // 父容器高度<子元素高度，显示滚动条
+    height: 200px;
     ul{
       padding: 0;
       margin: 0;

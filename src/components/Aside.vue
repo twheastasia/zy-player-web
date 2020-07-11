@@ -38,6 +38,7 @@
 
 <script>
 import { mapMutations } from 'vuex'
+
 export default {
   name: 'Aside',
   computed: {
@@ -66,8 +67,8 @@ export default {
   user-select: none;
   -webkit-app-region: drag;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
   span{
     -webkit-app-region: no-drag;

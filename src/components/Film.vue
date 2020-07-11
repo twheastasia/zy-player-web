@@ -70,7 +70,14 @@
         <div class="tFooter">
           <span class="tFooter-span">今日更新: {{ tb.update }} 条</span>
           <span class="tFooter-span btn" @click="goWebsite">加载不出来,点这里</span>
-          <el-pagination small :page-size="tb.size" :total="tb.total" :current-page="tb.page" @current-change="tbPageChange" layout="total, prev, pager, next, jumper"></el-pagination>
+          <el-pagination
+            size="small"
+            @current-change="tbPageChange"
+            :current-page.sync="tb.page"
+            :page-size="tb.size"
+            layout="total, prev, pager, next, jumper"
+            :total="tb.total"
+          />
         </div>
       </div>
     </div>
@@ -161,6 +168,9 @@ export default {
       const s = getSite(n)
       this.siteClick(s)
     }
+  },
+  created () {
+    this.init()
   },
   methods: {
     ...mapMutations(['SET_VIEW', 'SET_SITE', 'SET_DETAIL', 'SET_VIDEO', 'SET_SHARE']),
@@ -308,12 +318,10 @@ export default {
       // shell.openExternal(this.site.url)
       window.open(this.site.url, '_blank')
     }
-  },
-  created () {
-    this.init()
   }
 }
 </script>
+
 <style lang="scss" scoped>
 .film{
   height: calc(100% - 40px);

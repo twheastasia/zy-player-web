@@ -2,11 +2,12 @@
   <div id="app" :class="appTheme">
     <Aside />
     <div class="zy-body">
-      <Frame />
-      <Film v-show="view === 'Film'" />
-      <Play v-show="view === 'Play'" />
-      <Star v-show="view === 'Star'" />
-      <Setting v-show="view === 'Setting'" />
+      <!-- 最小化按钮和关闭按钮，web版不用 -->
+      <!-- <Frame /> -->
+      <Film v-if="view === 'Film'" />
+      <Play v-if="view === 'Play'" />
+      <Star v-if="view === 'Star'" />
+      <Setting v-if="view === 'Setting'" />
     </div>
     <transition name="slide">
       <Detail v-if="detail.show"/>
@@ -57,6 +58,9 @@ export default {
 @import './assets/scss/theme.scss';
 html, body, #app{
   border-radius: 6px;
+  // 铺满屏幕
+  width: 100%;
+  height: 100%;
 }
 #app {
   font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', SimSun, sans-serif;
@@ -75,7 +79,7 @@ html, body, #app{
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
-    padding: 0 20px 20px;
+    padding: 20px 20px;
   }
 }
 </style>
