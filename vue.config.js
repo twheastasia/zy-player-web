@@ -35,6 +35,18 @@ module.exports = {
     overlay: {
       warnings: false,
       errors: true
+    },
+    proxy: {
+      '^/zuidazy5': {
+        onProxyReq: (proxyReq, req, res) => {
+          proxyReq.setHeader('Referer', 'backend')
+        },
+        target: 'http://www.zuidazy5.com/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/zuidazy5': ''
+        }
+      }
     }
   },
   configureWebpack: {

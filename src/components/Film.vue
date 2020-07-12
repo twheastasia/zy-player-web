@@ -58,7 +58,7 @@
               <span class="operate">
                 <span class="btn" @click.stop="playEvent(i)">{{$t('play')}}</span>
                 <span class="btn" @click.stop="starEvent(i)">{{$t('star')}}</span>
-                <span class="btn" @click.stop="shareEvent(i)">{{$t('share')}}</span>
+                <!-- <span class="btn" @click.stop="shareEvent(i)">{{$t('share')}}</span> -->
                 <span class="btn" @click.stop="downloadEvent(i)">{{$t('download')}}</span>
               </span>
             </li>
@@ -316,7 +316,7 @@ export default {
     },
     goWebsite () {
       // shell.openExternal(this.site.url)
-      window.open(this.site.url, '_blank')
+      window.open(this.site.originUrl, '_blank')
     }
   }
 }

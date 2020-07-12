@@ -2,10 +2,15 @@ const sites = [
   {
     key: 'zuidazy',
     name: '最大资源网',
-    url: 'http://www.zuidazy5.com',
-    new: 'http://www.zuidazy5.com/?m=vod-index-pg-{page}.html',
-    view: 'http://www.zuidazy5.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.zuidazy5.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'http://www.zuidazy5.com',
+    url: '/zuidazy5',
+    new: '/zuidazy5?m=vod-index-pg-{page}.html',
+    view: '/zuidazy5?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/zuidazy5/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    // url: 'http://www.zuidazy5.com',
+    // new: 'http://www.zuidazy5.com/?m=vod-index-pg-{page}.html',
+    // view: 'http://www.zuidazy5.com/?m=vod-type-id-{id}-pg-{page}.html',
+    // search: 'http://www.zuidazy5.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {

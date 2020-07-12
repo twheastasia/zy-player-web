@@ -18,7 +18,7 @@
             <span class="operate" style="width: 220px">
               <span class="btn" @click.stop="playEvent(i)">{{$t('play')}}</span>
               <span class="btn" @click.stop="deleteEvent(i)">{{$t('delete')}}</span>
-              <span class="btn" @click.stop="shareEvent(i)">{{$t('share')}}</span>
+              <!-- <span class="btn" @click.stop="shareEvent(i)">{{$t('share')}}</span> -->
               <span class="btn" @click.stop="updateEvent(i)">{{$t('sync')}}</span>
               <span class="btn" @click.stop="downloadEvent(i)">{{$t('download')}}</span>
             </span>
