@@ -19,6 +19,7 @@
 </template>
 
 <script>
+import setting from './lib/dexie/setting'
 
 export default {
   name: 'App',
@@ -45,6 +46,11 @@ export default {
     theme () {
       this.changeTheme()
     }
+  },
+  mounted () {
+    setting.find().then(res => {
+      this.appTheme = `theme-${res.theme}`
+    })
   },
   methods: {
     changeTheme () {
