@@ -5,5 +5,7 @@ services:
     image: zy-player-web:latest
     container_name: zy-player-web
     ports:
-      - "3333:80"
+      - "80:80"
+    volumes:
+      - ./deploy/locations.conf:/etc/nginx/locations.conf
     restart: always
