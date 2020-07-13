@@ -165,7 +165,8 @@ const zy = {
   // 获取详情
   detail_get (key, url) {
     return new Promise((resolve, reject) => {
-      const type = getSite(key).type
+      const t = getSite(key)
+      const type = t ? t.type : 4
       axios.get(url).then(async res => {
         if (type === 0) {
           const zeroData = await this.detail_get_type_zero(res.data, key)
