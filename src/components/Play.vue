@@ -48,7 +48,7 @@
             <path d="M5 2h14a3 3 0 0 1 3 3v17H2V5a3 3 0 0 1 3-3z"></path>
           </svg>
         </span>
-        <span class="zy-svg" @click="smallEvent" v-show="right.listData.length > 0">
+        <!-- <span class="zy-svg" @click="smallEvent" v-show="right.listData.length > 0">
           <svg role="img" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" aria-labelledby="tvIconTitle">
             <title id="tvIconTitle">{{$t('mini')}}</title>
             <polygon points="20 8 20 20 4 20 4 8"></polygon>
@@ -71,7 +71,7 @@
             <rect x="21" y="3" width="7" height="7" transform="rotate(90 21 3)"></rect>
             <rect x="17" y="6" width="1" height="1"></rect>
           </svg>
-        </span>
+        </span> -->
       </div>
     </div>
     <transition name="slideX">
@@ -197,6 +197,13 @@ export default {
         this.getUrls()
       },
       deep: true
+    }
+  },
+  beforeDestroy () {
+    if (this.xg) {
+      if (this.xg.hasStart) {
+        this.xg.pause()
+      }
     }
   },
   methods: {
@@ -447,34 +454,7 @@ export default {
     history.all().then(res => {
       this.right.historyData = res
     })
-    // ipc.on('next', () => {
-    //   if (this.xg) {
-    //     if (this.xg.hasStart) {
-    //       this.nextEvent()
-    //     }
-    //   }
-    // })
-    // ipc.on('prev', () => {
-    //   if (this.xg) {
-    //     if (this.xg.hasStart) {
-    //       this.prevEvent()
-    //     }
-    //   }
-    // })
-    // ipc.on('playbackRateUp', () => {
-    //   if (this.xg) {
-    //     if (this.xg.hasStart) {
-    //       this.playbackRateEvent(0.25)
-    //     }
-    //   }
-    // })
-    // ipc.on('playbackRateDown', () => {
-    //   if (this.xg) {
-    //     if (this.xg.hasStart) {
-    //       this.playbackRateEvent(-0.25)
-    //     }
-    //   }
-    // })
+    this.getUrls()
   }
 }
 </script>
