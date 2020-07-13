@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  zy-player-web:
+    image: zy-player-web:latest
+    container_name: zy-player-web
+    ports:
+      - "3333:80"
+    restart: always
