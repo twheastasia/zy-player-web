@@ -58,8 +58,12 @@ const zy = {
           }
           d.list.push(info)
         }
-        d.update = parseInt(html.querySelectorAll('.xing_top_right li strong')[0].innerText)
-        let t = html.querySelector('.pages').innerText
+        // 容错
+        const updateTime = html.querySelectorAll('.xing_top_right li strong')
+        d.update = updateTime.length > 0 ? updateTime[0].innerText : ''
+        // d.update = parseInt(html.querySelectorAll('.xing_top_right li strong')[0].innerText)
+        const pages = html.querySelector('.pages')
+        let t = pages ? pages.innerText : ''
         t = t.split('条')[0]
         t = t.split('共')[1]
         d.total = parseInt(t)
