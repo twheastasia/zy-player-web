@@ -257,6 +257,9 @@ export default {
       }
     },
     playEvent (e) {
+      // 处理下url path后面的/,在代理时会引起问题
+      // 示例 detail: "/zuidazy5/?m=vod-detail-id-90403.html"
+      e.detail = e.detail.replace('/?', '?')
       this.video = e
       this.view = 'Play'
     },
