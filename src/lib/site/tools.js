@@ -171,6 +171,7 @@ const zy = {
     return new Promise((resolve, reject) => {
       const t = getSite(key)
       const type = t ? t.type : 4
+      console.log('detail_get url: ' + url)
       axios.get(url).then(async res => {
         if (type === 0) {
           const zeroData = await this.detail_get_type_zero(res.data, key)
