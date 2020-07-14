@@ -202,7 +202,9 @@ export default {
   beforeDestroy () {
     if (this.xg) {
       if (this.xg.hasStart) {
+        console.log('destroy')
         this.xg.pause()
+        this.xg.destroy()
       }
     }
   },
