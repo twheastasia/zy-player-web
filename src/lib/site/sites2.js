@@ -2,10 +2,15 @@ const sites = [
   {
     key: 'zuidazy',
     name: '最大资源网',
-    url: 'http://www.zuidazy5.com',
-    new: 'http://www.zuidazy5.com/?m=vod-index-pg-{page}.html',
-    view: 'http://www.zuidazy5.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.zuidazy5.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'http://www.zuidazy5.com',
+    url: '/zuidazy5',
+    new: '/zuidazy5?m=vod-index-pg-{page}.html',
+    view: '/zuidazy5?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/zuidazy5/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    // url: 'http://www.zuidazy5.com',
+    // new: 'http://www.zuidazy5.com/?m=vod-index-pg-{page}.html',
+    // view: 'http://www.zuidazy5.com/?m=vod-type-id-{id}-pg-{page}.html',
+    // search: 'http://www.zuidazy5.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -115,10 +120,11 @@ const sites = [
   {
     key: 'okzy',
     name: 'OK资源网',
-    url: 'https://www.okzy.co',
-    new: 'https://www.okzy.co/?m=vod-index-pg-{page}.html',
-    view: 'https://www.okzy.co/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'https://www.okzy.co/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'https://www.okzy.co',
+    url: '/okzy',
+    new: '/okzy?m=vod-index-pg-{page}.html',
+    view: '/okzy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/okzy/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -248,10 +254,11 @@ const sites = [
   {
     key: 'subo',
     name: '速播资源站',
-    url: 'https://www.subo988.com',
-    new: 'https://www.subo988.com/?m=vod-index-pg-{page}.html',
-    view: 'https://www.subo988.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'https://www.subo988.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'https://www.subo988.com',
+    url: '/subo',
+    new: '/subo?m=vod-index-pg-{page}.html',
+    view: '/subo?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/subo/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -350,11 +357,12 @@ const sites = [
   },
   {
     key: 'mahuazy',
-    name: '麻花资源',
-    url: 'http://www.mahuazy.com',
-    new: 'http://www.mahuazy.com/?m=vod-index-pg-{page}.html',
-    view: 'http://www.mahuazy.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.mahuazy.com/?m=vod-search-pg-{page}-wd-{keywords}.html',
+    name: '麻花资源(有问题)',
+    originUrl: 'http://www.mahuazy.com',
+    url: '/mahuazy',
+    new: '/mahuazy?m=vod-index-pg-{page}.html',
+    view: '/mahuazy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/mahuazy?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -497,10 +505,11 @@ const sites = [
   {
     key: 'zuixinzy',
     name: '最新资源网',
-    url: 'http://www.zuixinzy.net',
-    new: 'http://www.zuixinzy.net/?m=vod-index-pg-{page}.html',
-    view: 'http://www.zuixinzy.net/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.zuixinzy.net/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'http://www.zuixinzy.net',
+    url: '/zuixinzy',
+    new: '/zuixinzy?m=vod-index-pg-{page}.html',
+    view: '/zuixinzy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/zuixinzy/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -633,10 +642,11 @@ const sites = [
   {
     key: '123ku',
     name: '123资源网',
-    url: 'https://www.123ku.com',
-    new: 'https://www.123ku.com/?m=vod-index-pg-{page}.html',
-    view: 'https://www.123ku.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'https://www.123ku.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    originUrl: 'https://www.123ku.com',
+    url: '/123ku',
+    new: '/123ku?m=vod-index-pg-{page}.html',
+    view: '/123ku?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/123ku/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -734,11 +744,12 @@ const sites = [
   },
   {
     key: '209zy',
-    name: '209资源网',
-    url: 'http://www.209zy.com',
-    new: 'http://www.209zy.com/?m=vod-index-pg-{page}.html',
-    view: 'http://www.209zy.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.209zy.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    name: '209资源网(有问题)',
+    originUrl: 'http://www.209zy.com',
+    url: '/209zy',
+    new: '/209zy?m=vod-index-pg-{page}.html',
+    view: '/209zy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/209zy/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -844,11 +855,12 @@ const sites = [
   },
   {
     key: '265zy',
-    name: '超快资源网',
-    url: 'http://265zy.cc',
-    new: 'http://265zy.cc/?m=vod-index-pg-{page}.html',
-    view: 'http://265zy.cc/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://265zy.cc/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    name: '超快资源网(有问题)',
+    originUrl: 'http://265zy.cc',
+    url: '/265zy',
+    new: '/265zy?m=vod-index-pg-{page}.html',
+    view: '/265zy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/265zy/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -983,11 +995,12 @@ const sites = [
   },
   {
     key: '666zy',
-    name: '哈酷资源网',
-    url: 'http://www.666zy.com',
-    new: 'http://www.666zy.com/?m=vod-index-pg-{page}.html',
-    view: 'http://www.666zy.com/?m=vod-type-id-{id}-pg-{page}.html',
-    search: 'http://www.666zy.com/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
+    name: '哈酷资源网(有问题)',
+    originUrl: 'http://www.666zy.com',
+    url: '/666zy',
+    new: '/666zy?m=vod-index-pg-{page}.html',
+    view: '/666zy?m=vod-type-id-{id}-pg-{page}.html',
+    search: '/666zy/index.php?m=vod-search-pg-{page}-wd-{keywords}.html',
     type: 0,
     tags: [
       {
@@ -1146,11 +1159,12 @@ const sites = [
   },
   {
     key: 'wolongzy',
-    name: '卧龙资源网',
-    url: 'https://wolongzy.net',
-    new: 'https://wolongzy.net/?page={page}',
-    view: 'https://wolongzy.net/type/{id}.html?page={page}',
-    search: 'https://wolongzy.net/search.html?searchword={keywords}',
+    name: '卧龙资源网(有问题)',
+    originUrl: 'https://wolongzy.net',
+    url: '/wolongzy',
+    new: '/wolongzy?page={page}',
+    view: '/wolongzy/type/{id}.html?page={page}',
+    search: '/wolongzy/search.html?searchword={keywords}',
     type: 1,
     tags: [
       {
@@ -1258,10 +1272,11 @@ const sites = [
   },
   {
     key: 'gaoqingzy',
-    name: '高清资源网',
-    url: 'http://cj.gaoqingzyw.com',
-    new: 'http://cj.gaoqingzyw.com/?m=vod-index-pg-{page}.html',
-    view: 'http://cj.gaoqingzyw.com/?m=vod-type-id-{id}-pg-{page}.html',
+    name: '高清资源网(有问题)',
+    originUrl: 'http://cj.gaoqingzyw.com',
+    url: '/gaoqingzy',
+    new: '/gaoqingzy?m=vod-index-pg-{page}.html',
+    view: '/gaoqingzy?m=vod-type-id-{id}-pg-{page}.html',
     search: '',
     type: 2,
     tags: [
@@ -1365,9 +1380,10 @@ const sites = [
   {
     key: '135zy',
     name: '135资源网',
-    url: 'http://135zy0.com',
-    new: 'http://135zy0.com/?m=vod-index-pg-{page}.html',
-    view: 'http://135zy0.com/?m=vod-type-id-{id}-pg-{page}.html',
+    originUrl: 'http://135zy0.com',
+    url: '/135zy',
+    new: '/135zy?m=vod-index-pg-{page}.html',
+    view: '/135zy?m=vod-type-id-{id}-pg-{page}.html',
     search: '',
     type: 3,
     tags: [

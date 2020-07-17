@@ -16,8 +16,12 @@ const zy = {
         url = site.view.replace(/{id}/, id).replace(/{page}/, page)
       }
       const type = site.type
-      axios.get(url).then(async res => {
-        const data = res.data
+      axios({
+        url: 'http://101.132.146.150:4015/transfer-api',
+        method: 'post',
+        data: { url: url, method: 'get', timeout: 10000 }
+      }).then(async res => {
+        const data = res.data.data
         if (type === 0) {
           const zeroData = await this.film_get_type_zero(data, key)
           resolve(zeroData)
@@ -172,21 +176,26 @@ const zy = {
       const t = getSite(key)
       const type = t ? t.type : 4
       console.log('detail_get url: ' + url)
-      axios.get(url).then(async res => {
+      axios({
+        url: 'http://101.132.146.150:4015/transfer-api',
+        method: 'post',
+        data: { url: url, method: 'get', timeout: 10000 }
+      }).then(async res => {
+        const data = res.data.data
         if (type === 0) {
-          const zeroData = await this.detail_get_type_zero(res.data, key)
+          const zeroData = await this.detail_get_type_zero(data, key)
           resolve(zeroData)
         }
         if (type === 1) {
-          const oneData = await this.detail_get_type_one(res.data, key)
+          const oneData = await this.detail_get_type_one(data, key)
           resolve(oneData)
         }
         if (type === 2) {
-          const twoData = await this.detail_get_type_two(res.data, key)
+          const twoData = await this.detail_get_type_two(data, key)
           resolve(twoData)
         }
         if (type === 3) {
-          const threeData = await this.detail_get_type_three(res.data, key)
+          const threeData = await this.detail_get_type_three(data, key)
           resolve(threeData)
         }
       }).catch(err => {
@@ -380,8 +389,12 @@ const zy = {
       if (type === 1) {
         url = site.search.replace(/{keywords}/, keywords)
       }
-      axios.get(url).then(async res => {
-        const data = res.data
+      axios({
+        url: 'http://101.132.146.150:4015/transfer-api',
+        method: 'post',
+        data: { url: url, method: 'get', timeout: 10000 }
+      }).then(async res => {
+        const data = res.data.data
         if (type === 0) {
           const zeroData = await this.search_get_type_zero(data, key)
           resolve(zeroData)

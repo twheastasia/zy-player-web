@@ -36,128 +36,128 @@ module.exports = {
       warnings: false,
       errors: true
     },
-    proxy: {
-      '^/zuidazy5': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.zuidazy5.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/zuidazy5': ''
-        }
-      },
-      '^/okzy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'https://www.okzy.co',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/okzy': ''
-        }
-      },
-      '^/subo': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'https://www.subo988.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/subo': ''
-        }
-      },
-      '^/mahuazy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.mahuazy.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/mahuazy': ''
-        }
-      },
-      '^/zuixinzy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.zuixinzy.net',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/zuixinzy': ''
-        }
-      },
-      '^/123ku': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.123ku.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/123ku': ''
-        }
-      },
-      '^/209zy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.209zy.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/209zy': ''
-        }
-      },
-      '^/265zy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.265zy.cc',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/265zy': ''
-        }
-      },
-      '^/666zy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://www.666zy.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/666zy': ''
-        }
-      },
-      '^/wolongzy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'https://wolongzy.net',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/wolongzy': ''
-        }
-      },
-      '^/gaoqingzy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://cj.gaoqingzyw.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/gaoqingzy': ''
-        }
-      },
-      '^/135zy': {
-        onProxyReq: (proxyReq, req, res) => {
-          proxyReq.setHeader('Referer', 'backend')
-        },
-        target: 'http://135zy0.com',
-        changeOrigin: true,
-        pathRewrite: {
-          '^/135zy': ''
-        }
-      }
-    }
+    // proxy: {
+    //   '^/zuidazy5': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.zuidazy5.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/zuidazy5': ''
+    //     }
+    //   },
+    //   '^/okzy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'https://www.okzy.co',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/okzy': ''
+    //     }
+    //   },
+    //   '^/subo': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'https://www.subo988.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/subo': ''
+    //     }
+    //   },
+    //   '^/mahuazy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.mahuazy.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/mahuazy': ''
+    //     }
+    //   },
+    //   '^/zuixinzy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.zuixinzy.net',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/zuixinzy': ''
+    //     }
+    //   },
+    //   '^/123ku': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.123ku.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/123ku': ''
+    //     }
+    //   },
+    //   '^/209zy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.209zy.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/209zy': ''
+    //     }
+    //   },
+    //   '^/265zy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.265zy.cc',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/265zy': ''
+    //     }
+    //   },
+    //   '^/666zy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://www.666zy.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/666zy': ''
+    //     }
+    //   },
+    //   '^/wolongzy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'https://wolongzy.net',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/wolongzy': ''
+    //     }
+    //   },
+    //   '^/gaoqingzy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://cj.gaoqingzyw.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/gaoqingzy': ''
+    //     }
+    //   },
+    //   '^/135zy': {
+    //     onProxyReq: (proxyReq, req, res) => {
+    //       proxyReq.setHeader('Referer', 'backend')
+    //     },
+    //     target: 'http://135zy0.com',
+    //     changeOrigin: true,
+    //     pathRewrite: {
+    //       '^/135zy': ''
+    //     }
+    //   }
+    // }
   },
   configureWebpack: {
     // provide the app's title in webpack's name field, so that
